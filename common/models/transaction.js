@@ -18,11 +18,12 @@ module.exports = function(Transaction) {
 			options: {
 				submitForSettlement: true
 			}
-	}, function (result, err) {
+	}, function (err, result) {
 			console.log(result);
 			console.log(err);
 			if(result.success) {
 				var transaction = result.transaction;
+				console.log(result);
 				return res(transaction);
 			} else if(err != null && !result.success) {
 				console.log(err);
