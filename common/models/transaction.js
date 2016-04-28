@@ -22,7 +22,7 @@ module.exports = function(Transaction) {
 			console.log(result);
 			console.log(err);
 			if(result.success) {
-				var transaction = result.transaction;
+				var transaction = 'Payment successful!';
 				console.log(result);
 				return res(transaction);
 			} else if(err != null && !result.success) {
