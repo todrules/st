@@ -19,10 +19,14 @@ module.exports = function(Transaction) {
 				submitForSettlement: true
 			}
 	}, function (err, result) {
-			if (err) {
-				res('error:');
+			if(result.success) {
+				var transaction = result.transaction;
+				return res(transaction);
+			} else if(err != null && !result.success) {
+				console.log(err);
+				return res('error:', err);
 			} else {
-				res('success:');
+				return res(result);
 			}
 		});
 	};
@@ -32,7 +36,7 @@ module.exports = function(Transaction) {
 		{
 			http: {path: '/payment', verb: 'post'},
 			accepts: {arg: 'req', type: 'object', 'http': {source: 'body'}},
-			returns: {arg: 'msg', type: 'string'}
+			returns: {arg: 'res', type: 'object'}
 		}
 	);
 };
