@@ -23,7 +23,7 @@ module.exports = function(Transaction) {
 				res(err);
 				return;
 			}
-				res({result: result});
+				res(null, result);
 				return;
 		});
 	};
