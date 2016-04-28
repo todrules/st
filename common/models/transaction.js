@@ -11,13 +11,14 @@ module.exports = function(Transaction) {
 	//var nonce = req.body.payment_method_nonce;
 	Transaction.payment = function(req, res) {
 		var nonce = req.payment_method_nonce;
+		var amtDue = req.amtDue;
 		gateway.transaction.sale({
-			amount: '10.00',
+			amount: amtDue,
 			paymentMethodNonce: nonce,
 			options: {
 				submitForSettlement: true
 			}
-	}, function (err, result) {
+	}, function (result, err) {
 			console.log(result);
 			console.log(err);
 			if(result.success) {
