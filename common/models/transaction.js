@@ -19,19 +19,12 @@ module.exports = function(Transaction) {
 				submitForSettlement: true
 			}
 	}, function (err, result) {
-			console.log(result);
-			console.log(err);
-			if(result.success) {
-				var transaction = 'Payment successful!';
-				console.log(result);
-				return res(transaction);
-			} else if(err != null && !result.success) {
-				console.log(err);
-				return res('error:', err);
+			if (err) {
+				res.send('error:', err);
 			} else {
-				return res(result);
+				res.send('successfully charged');
 			}
-		})
+		});
 	};
 
 	Transaction.remoteMethod(
