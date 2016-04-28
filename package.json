@@ -8,9 +8,10 @@
     "posttest": "nsp check"
   },
   "engines": {
-    "node": "0.10.x"
+    "node": "0.12.x"
   },
   "dependencies": {
+    "braintree": "^1.37.1",
     "compression": "^1.0.3",
     "cors": "^2.5.2",
     "helmet": "^0.14.0",

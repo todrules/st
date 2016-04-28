@@ -1,7 +1,20 @@
 var loopback = require('loopback');
 var boot = require('loopback-boot');
+var braintree = require('braintree');
 
 var app = module.exports = loopback();
+
+var gateway = braintree.connect({
+    environment: braintree.Environment.Sandbox,
+    merchantId: "jjt86fgtc386pgqw",
+    publicKey: "7zqtmfxrwmd7p7p7",
+    privateKey: "4bcf950726dff60167e3bf30c5fb1383"
+});
+
+app.use('/v2', function(req, res) {
+	var url = 'https://api.scalablepress.com/v2' + req.url;
+	req.pipe(request(url)).pipe(res);
+});
 
 app.start = function() {
   // start the web server

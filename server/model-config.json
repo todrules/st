@@ -31,5 +31,13 @@
   "Role": {
     "dataSource": "db",
     "public": false
+  },
+  "ClientToken": {
+    "dataSource": "db",
+    "public": true
+  },
+  "Transaction": {
+    "dataSource": "db",
+    "public": true
   }
 }
