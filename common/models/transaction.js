@@ -20,9 +20,9 @@ module.exports = function(Transaction) {
 			}
 	}, function (err, result) {
 			if (err) {
-				res.send('error:', err);
+				res('error:');
 			} else {
-				res.send('successfully charged');
+				res('success:');
 			}
 		});
 	};
@@ -32,7 +32,7 @@ module.exports = function(Transaction) {
 		{
 			http: {path: '/payment', verb: 'post'},
 			accepts: {arg: 'req', type: 'object', 'http': {source: 'body'}},
-			returns: {arg: 'transaction', type: 'object', 'http': {source: 'body'}}
+			returns: {arg: 'msg', type: 'string'}
 		}
 	);
 };
