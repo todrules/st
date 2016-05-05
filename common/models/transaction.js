@@ -12,8 +12,31 @@ module.exports = function(Transaction) {
 	Transaction.payment = function(req, res) {
 		var nonce = req.payment_method_nonce;
 		var amtDue = req.amtDue;
+		var name = req.name.split(' ');
+		var orderId = req.orderId;
+		var email = req.email;
+		var address1 = req.address1;
+		var city = req.city;
+		var state = req.state;
+		var zip = req.zip;
+		var firstName = name[0];
+		var lastName = name[1];
 		gateway.transaction.sale({
 			amount: amtDue,
+			orderId: orderId,
+			customer: {
+				firstName: firstName,
+				lastName: lastName,
+				email: email
+			},
+			shipping: {
+				firstName: firstName,
+				lastName: lastName,
+				streetAddress: address1,
+				locality: city,
+				region: state,
+				postalCode: zip
+			},
 			paymentMethodNonce: nonce,
 			options: {
 				submitForSettlement: true
