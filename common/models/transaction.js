@@ -5,8 +5,8 @@ module.exports = function(Transaction) {
 	var gateway = braintree.connect({
             environment: braintree.Environment.Production,
             merchantId: "3td6z59z6r7zr467",
-            publicKey: "xnbc8qt8dcknwkng",
-            privateKey: "76adb8eda0d17244eae3d018c2453546"
+            publicKey: "tmp2rmkwjbbkqhf4",
+            privateKey: "ce1ae67edb7207b63d1d5e2df06f26aa"
 	});
 	//var nonce = req.body.payment_method_nonce;
 	Transaction.payment = function(req, res) {
