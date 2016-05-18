@@ -13,9 +13,9 @@ module.exports = function(ClientToken) {
 		gateway.clientToken.generate({}, function (err, response) {
 			if (err || !response || !response.clientToken) {
 				if (err.name === 'authenticationError') {
-					console.error('Please fill in examples/server.js with your credentials from Account->API Keys in your Sandbox dashboard: https://sandbox.braintreegateway.com/');
-					console.error('Using a dummy client token... this may or may not work');
-					token('dummyClientToken');
+					console.error('Authentication Error');
+					//console.error('Using a dummy client token... this may or may not work');
+					//token('dummyClientToken');
 				} else {
 					console.error(err);
 					token(err);
