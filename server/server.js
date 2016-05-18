@@ -5,11 +5,12 @@ var braintree = require('braintree');
 var app = module.exports = loopback();
 
 var gateway = braintree.connect({
-    environment: braintree.Environment.Sandbox,
-    merchantId: "jjt86fgtc386pgqw",
-    publicKey: "7zqtmfxrwmd7p7p7",
-    privateKey: "4bcf950726dff60167e3bf30c5fb1383"
+    environment: braintree.Environment.Production,
+    merchantId: "3td6z59z6r7zr467",
+    publicKey: "xnbc8qt8dcknwkng",
+    privateKey: "76adb8eda0d17244eae3d018c2453546"
 });
+
 
 app.use('/v2', function(req, res) {
 	var url = 'https://api.scalablepress.com/v2' + req.url;
