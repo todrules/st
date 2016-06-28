@@ -1,6 +1,6 @@
 {
   "restApiRoot": "/api",
-  "host": "https://selfietee-staging.herokuapp.com",
+  "host": "0.0.0.0",
   "port": 5000,
   "remoting": {
     "context": {
