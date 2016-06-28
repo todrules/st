@@ -2,10 +2,10 @@
   "basePrice": 16,
   "baseUrl": "https://enigmatic-lowlands-91690.herokuapp.com/api",
   "scalableAuth": "Basic OmxpdmVfVTJ1cVFwdHEwYkphSENOQTcwMXlNUQ==",
-  "cloud_name": "smart-screen-software",
-  "upload_preset": "SelfieTee 1",
-  "analytics_id": "UA-55684295-3",
-  "product_id": "gildan-ultra-blend-50-50-t",
-  "upload_proof": "https://res.cloudinary.com/smart-screen-software/image/upload/bo_1px_solid_rgb:000,c_fill,h_270,r_max,w_270/u_tee,x_3,y_135/c_fit,g_north,w_270,x_-3,y_415,l_text:Impact_36_center:",
-  "upload_art": "https://res.cloudinary.com/smart-screen-software/image/upload/bo_1px_solid_rgb:000,c_fill,h_1000,w_1000,q_100,r_max/g_north,c_fit,w_1000,y_1040,l_text:Impact_132_center:"
+  "cloudName": "smart-screen-software",
+  "uploadPreset": "SelfieTee 1",
+  "analyticsId": "UA-55684295-3",
+  "productId": "gildan-ultra-blend-50-50-t",
+  "uploadProof": "https://res.cloudinary.com/smart-screen-software/image/upload/bo_1px_solid_rgb:000,c_fill,h_270,r_max,w_270/u_tee,x_3,y_135/c_fit,g_north,w_270,x_-3,y_415,l_text:Impact_36_center:",
+  "uploadArt": "https://res.cloudinary.com/smart-screen-software/image/upload/bo_1px_solid_rgb:000,c_fill,h_1000,w_1000,q_100,r_max/g_north,c_fit,w_1000,y_1040,l_text:Impact_132_center:"
 }

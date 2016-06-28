@@ -2,11 +2,18 @@ var braintree = require('braintree');
 
 module.exports = function(Transaction) {
 
+//	var gateway = braintree.connect({
+//            environment: braintree.Environment.Production,
+ //           merchantId: "3td6z59z6r7zr467",
+ //           publicKey: "tmp2rmkwjbbkqhf4",
+ //           privateKey: "ce1ae67edb7207b63d1d5e2df06f26aa"
+//	});
+
 	var gateway = braintree.connect({
-            environment: braintree.Environment.Production,
-            merchantId: "3td6z59z6r7zr467",
-            publicKey: "tmp2rmkwjbbkqhf4",
-            privateKey: "ce1ae67edb7207b63d1d5e2df06f26aa"
+		environment: braintree.Environment.Sandbox,
+		merchantId: "jjt86fgtc386pgqw",
+		publicKey: "7zqtmfxrwmd7p7p7",
+		privateKey: "4bcf950726dff60167e3bf30c5fb1383"
 	});
 	//var nonce = req.body.payment_method_nonce;
 	Transaction.payment = function(req, res) {

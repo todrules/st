@@ -1,0 +1,11 @@
+{
+  "basePrice": 16,
+  "baseUrl": "http://localhost:5000/api",
+  "scalableAuth": "Basic OnRlc3RfUzF1NWZmSEVRS3dNRnpSRjB1STlmQQ==",
+  "cloudName": "grooveio88",
+  "uploadPreset": "selfietee",
+  "analyticsId": "UA-46630994-2",
+  "productId": "gildan-ultra-blend-50-50-t",
+  "uploadProof": "https://res.cloudinary.com/grooveio88/image/upload/bo_1px_solid_rgb:000,c_fill,h_270,r_max,w_270/u_tee,x_3,y_135/c_fit,g_north,w_270,x_-3,y_415,l_text:Impact_36_center:",
+  "uploadArt": "https://res.cloudinary.com/grooveio88/image/upload/bo_1px_solid_rgb:000,c_fill,h_1000,w_1000,q_100,r_max/g_north,c_fit,w_1000,y_1040,l_text:Impact_132_center:"
+}
